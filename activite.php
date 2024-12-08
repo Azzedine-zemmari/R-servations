@@ -35,8 +35,8 @@
             $query = "SELECT * FROM activite";
             $result = mysqli_query($db_connect,$query);
         ?>
-        <a class="bg-green-400 text-white" href="client.php">add client</a>
-        <table class="w-full text-left ">
+        <a class="bg-green-400 text-white" href="addActivite.php">add activite</a>
+        <table class="w-full text-left overflow-x-auto">
             <thead>
                 <tr>
                     <th class="px-2 md:px-6 py-3">#</th>
@@ -61,7 +61,7 @@
                     <td class="px-2 md:px-6 py-3"><?php echo $data["date_debut"]; ?></td>
                     <td class="px-2 md:px-6 py-3"><?php echo $data["date_fin"]; ?></td>
                     <td class="px-2 md:px-6 py-3"><?php echo $data["places_disponibles"]; ?></td>
-                    <td class="px-2 md:px-6 py-3">
+                    <td class="px-2 md:px-6 py-3 flex space-x-2">
                         <a class="bg-blue-400 text-white p-3 rounded-lg" href="edit.php">Edit</a>
                         <a class="bg-red-400 text-white p-3 rounded-lg" href="delete.php">Delete</a>
                     </td>
