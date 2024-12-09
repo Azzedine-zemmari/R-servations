@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $userName = "root";
-$password = "";
+$password = "Azzedine2004";
 $dbName = "reservation";
 
 $db_connect = mysqli_connect($host,$userName,$password,$dbName);
