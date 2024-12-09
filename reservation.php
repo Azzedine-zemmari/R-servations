@@ -26,13 +26,17 @@
             </div>
             <div class="flex gap-5">
                 <img src="./home-svgrepo-com.svg" class="w-5 h-5" alt="">
-                <a href="./reservation.php" class="w-20 text-[#424242]">reservation</a>
+                <p class="w-20 text-[#424242]">reservation</p>
             </div>
         </aside>
         <section class="w-4/5">
         <?php
             include "./dbConnect.php";
-            $query = "SELECT * FROM client";
+            $query = "
+            SELECT reservation.id_reservation,reservation.date_reservation, reservation.status, client.nom, activite.titre 
+            FROM reservation 
+            JOIN client ON reservation.id_client = client.id_client
+            JOIN activite ON reservation.id_activite = activite.id_activite"; 
             $result = mysqli_query($db_connect,$query);
         ?>
         <a class="bg-green-400 text-white" href="client.php">add client</a>
@@ -41,25 +45,21 @@
                 <thead>
                     <tr>
                         <th class="px-2 md:px-6 py-3">#</th>
-                        <th class="px-2 md:px-6 py-3">nom</th>
-                        <th class="px-2 md:px-6 py-3">prenom</th>
-                        <th class="px-2 md:px-6 py-3">email</th>
-                        <th class="px-2 md:px-6 py-3">telephone</th>
-                        <th class="px-2 md:px-6 py-3">adresse</th>
-                        <th class="px-2 md:px-6 py-3">date_naissance</th>
+                        <th class="px-2 md:px-6 py-3">client</th>
+                        <th class="px-2 md:px-6 py-3">activite</th>
+                        <th class="px-2 md:px-6 py-3">date_reservation</th>
+                        <th class="px-2 md:px-6 py-3">status</th>
                         <th class="px-2 md:px-6 py-3">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php while($data = mysqli_fetch_assoc($result)): ?>
                     <tr class="border-b">
-                        <td class="px-2 md:px-6 py-3"><?php echo $data["id_client"]; ?></td>
+                        <td class="px-2 md:px-6 py-3"><?php echo $data["id_reservation"]; ?></td>
                         <td class="px-2 md:px-6 py-3"><?php echo $data["nom"]; ?></td>
-                        <td class="px-2 md:px-6 py-3"><?php echo $data["prenom"]; ?></td>
-                        <td class="px-2 md:px-6 py-3"><?php echo $data["email"]; ?></td>
-                        <td class="px-2 md:px-6 py-3"><?php echo $data["telephone"]; ?></td>
-                        <td class="px-2 md:px-6 py-3"><?php echo $data["adresse"]; ?></td>
-                        <td class="px-2 md:px-6 py-3"><?php echo $data["date_naissance"]; ?></td>
+                        <td class="px-2 md:px-6 py-3"><?php echo $data["titre"]; ?></td>
+                        <td class="px-2 md:px-6 py-3"><?php echo $data["date_reservation"]; ?></td>
+                        <td class="px-2 md:px-6 py-3"><?php echo $data["status"]; ?></td>
                         <td class="px-2 md:px-6 py-3 flex space-x-2">
                             <a class="bg-blue-400 text-white p-3 rounded-lg" href="edit.php">Edit</a>
                             <a class="bg-red-400 text-white p-3 rounded-lg" href="delete.php">Delete</a>

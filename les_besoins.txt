@@ -1,0 +1,22 @@
+Les Besoins : 
+Les besoins fonctionnels :  
+
+    Les besoins fonctionnels décrivent les fonctionnalités directes de l'application qui permettent de réaliser certaines actions ou processus métiers. Elles se concentrent sur ce que l'application fait.
+	
+    Gestion de réservations 
+	Gestions d’activités 
+	Inscriptions 
+	Consultation des offres 
+	Réservation des activités
+	Personnaliser les réservations 
+
+Les besoins non fonctionnels :
+
+    Les besoins non fonctionnels spécifient les exigences de qualité qui doivent soutenir l’application dans son fonctionnement global. Ces critères concernent la performance, la sécurité, l’accessibilité, etc., sans affecter directement les fonctionnalités principales.
+    
+    Réactivité et performance (temps de chargement optimisés)
+    Sécurité des données et conformité (protection des informations sensibles)
+    Accessibilité (respect des normes d’accessibilité pour tous les utilisateurs)
+    Disponibilité et fiabilité (maintenance minimale)
+    Scalabilité (capacité à gérer une croissance du nombre d’utilisateurs)
+    Documentation claire et complète (pour les utilisateurs et les développeurs)

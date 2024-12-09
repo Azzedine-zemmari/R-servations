@@ -26,7 +26,7 @@
             </div>
             <div class="flex gap-5">
                 <img src="./home-svgrepo-com.svg" class="w-5 h-5" alt="">
-                <p class="w-20 text-[#424242]">reservation</p>
+                <a href="./reservation.php" class="w-20 text-[#424242]">reservation</a>
             </div>
         </aside>
         <section class="w-4/5">
