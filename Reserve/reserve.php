@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <?php
-    include "./dbConnect.php";
+    include "../dbConnect.php";
     $query = "SELECT * FROM client";
     $Clients = mysqli_query($db_connect,$query);
 

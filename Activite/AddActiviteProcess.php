@@ -1,5 +1,5 @@
 <?php 
-include "./dbConnect.php";
+include "../dbConnect.php";
 
 $titre = $_POST['titre'];
 $description = $_POST['description'];
@@ -14,4 +14,4 @@ $query = "INSERT INTO activite(titre,description,destination,prix,date_debut,dat
 
 mysqli_query($db_connect,$query);
 
-header("Location: index.php");
+header("Location: ./activite.php");

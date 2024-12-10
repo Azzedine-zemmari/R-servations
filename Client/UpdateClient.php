@@ -1,6 +1,6 @@
 <?php
 
-include "./dbConnect.php";
+include "../dbConnect.php";
 $id = $_POST['id_client'];
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
@@ -20,6 +20,6 @@ $query = "UPDATE client SET
 
 $conn = mysqli_query($db_connect,$query);
 if($conn){
-    header("Location: index.php");
+    header("Location: ../index.php");
 }
 ?>

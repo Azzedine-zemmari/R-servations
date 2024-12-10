@@ -1,6 +1,6 @@
 <?php
 
-include "./dbConnect.php";
+include "../dbConnect.php";
 
 $id = $_GET['client_id'];
 

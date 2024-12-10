@@ -1,6 +1,6 @@
 <?php
 
-include "./dbConnect.php";
+include "../dbConnect.php";
 
 $name = $_POST['nom'];
 $prenom = $_POST['prenom'];
@@ -13,4 +13,4 @@ $query = "INSERT INTO client(nom,prenom,email,telephone,adresse,date_naissance) 
 
 mysqli_query($db_connect,$query);
 
-header("Location: index.php");
+header("Location: ../index.php");

@@ -1,6 +1,6 @@
 <?php
 
-include "./dbConnect.php"
+include "../dbConnect.php"
 ?>
 
 <!DOCTYPE html>

@@ -8,30 +8,30 @@
 </head>
 <body>
     <header class="flex justify-between px-2 py-3 bg-gray-800">
-        <img src="./logo-white.png" class="w-40" alt="">
+        <img src="../images/logo-white.png" class="w-40" alt="">
         <div class="flex gap-3 items-center">
-            <img src="./avatar.png" class="w-10 h-10" alt="">
+            <img src="../images/avatar.png" class="w-10 h-10" alt="">
             <p class="text-white font-bold  ">Hi,Admin</p>
         </div>
     </header>
     <main class="flex">
     <aside class ="flex flex-col shadow-sm w-56 bg-gray-800 h-screen">
             <div class="flex gap-5 items-center pl-3 py-2 border-b-2 border-green-600">
-                <img src="./hire.png" class="w-8 h-8" alt="">
-                <a href="index.php" class="w-20 text-white">client</a>
+                <img src="../images/hire.png" class="w-8 h-8" alt="">
+                <a href="../index.php" class="w-20 text-white">client</a>
             </div>
             <div class="flex gap-5 items-center pl-3 py-2 border-b-2 border-red-600">
-                <img src="./travel-bag.png" class="w-8 h-8" alt="">
-                <a href="activite.php" class="w-20 text-white">activite</a>
+                <img src="../images/travel-bag.png" class="w-8 h-8" alt="">
+                <a href="../Activite/activite.php" class="w-20 text-white">activite</a>
             </div>
             <div class="flex gap-5 items-center pl-3 py-2 border-b-2 border-yellow-600">
-                <img src="./reception-bell.png" class="w-8 h-8" alt="">
-                <a href="./reservation.php" class="w-20 text-white">reservation</a>
+                <img src="../images/reception-bell.png" class="w-8 h-8" alt="">
+                <a href="../Reserve/reservation.php" class="w-20 text-white">reservation</a>
             </div>
         </aside>
         <section class="w-full">
         <?php
-            include "./dbConnect.php";
+            include "../dbConnect.php";
             $query = "
             SELECT reservation.id_reservation,reservation.date_reservation, reservation.status, client.nom, activite.titre 
             FROM reservation 

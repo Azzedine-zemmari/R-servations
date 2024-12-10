@@ -16,17 +16,17 @@
     </header>
     <main class="flex">
         <aside class ="flex flex-col shadow-sm w-56 bg-gray-800 h-screen">
-            <div class="flex gap-5 items-center pl-3 py-2 border-b-2 border-green-600">
+        <div class="flex gap-5 items-center pl-3 py-2 border-b-2 border-green-600">
                 <img src="./hire.png" class="w-8 h-8" alt="">
-                <a href="index.php" class="w-20 text-white">client</a>
+                <a href="./index.php" class="w-20 text-white">client</a>
             </div>
             <div class="flex gap-5 items-center pl-3 py-2 border-b-2 border-red-600">
                 <img src="./travel-bag.png" class="w-8 h-8" alt="">
-                <a href="activite.php" class="w-20 text-white">activite</a>
+                <a href="./Activite/activite.php" class="w-20 text-white">activite</a>
             </div>
             <div class="flex gap-5 items-center pl-3 py-2 border-b-2 border-yellow-600">
                 <img src="./reception-bell.png" class="w-8 h-8" alt="">
-                <a href="./reservation.php" class="w-20 text-white">reservation</a>
+                <a href="./Reserve/reservation.php" class="w-20 text-white">reservation</a>
             </div>
         </aside>
         <section class="w-full">
@@ -37,7 +37,7 @@
         ?>
         <div class="bg-gradient-to-r from-[#2f88da] to-[#07075a] px-5 py-3 flex justify-between w-full rounded-bl-lg rounded-br-lg">
             <h1 class="text-white font-bold">Client table</h1>
-            <a class="bg-green-400 text-white px-2 py-1 rounded-md" href="client.php">add client</a>
+            <a class="bg-green-400 text-white px-2 py-1 rounded-md" href="./Client/client.php">add client</a>
         </div>
         <div class="overflow-x-auto">
             <table class="w-full text-left table-auto">
@@ -64,8 +64,8 @@
                         <td class="px-2 md:px-6 py-3"><?php echo $data["adresse"]; ?></td>
                         <td class="px-2 md:px-6 py-3"><?php echo $data["date_naissance"]; ?></td>
                         <td class="px-2 md:px-6 py-3 flex space-x-2">
-                            <a class="bg-blue-400 text-white p-3 rounded-lg" href="./EditClient.php?client_id=<?php echo $data["id_client"]; ?>">Edit</a>
-                            <a class="bg-red-400 text-white p-3 rounded-lg" href="./DeleteClient.php?client_id=<?php echo $data["id_client"]; ?>">Delete</a>
+                            <a class="bg-blue-400 text-white p-3 rounded-lg" href="./Client/EditClient.php?client_id=<?php echo $data["id_client"]; ?>">Edit</a>
+                            <a class="bg-red-400 text-white p-3 rounded-lg" href="./Client/DeleteClient.php?client_id=<?php echo $data["id_client"]; ?>">Delete</a>
                         </td>
                     </tr>
                     <?php endwhile; ?>
