@@ -21,7 +21,8 @@ $data = mysqli_fetch_assoc($result);
 </head>
 <body class="bg-gray-50">
     <div class="flex justify-center items-center mt-4">
-        <form class="w-1/2 flex flex-col bg-white px-4 py-2 shadow sm:rounded-lg sm:px-10" action="AddActiviteProcess.php" method="post">
+        <form class="w-1/2 flex flex-col bg-white px-4 py-2 shadow sm:rounded-lg sm:px-10" action="UpdateClient.php" method="post">
+            <input type="hidden" name="id_client" value="<?php echo $data['id_client']; ?>">
             <label for="">nom</label>
             <input type="text" name="nom" value="<?php echo $data['nom']; ?>" class="block w-full px-3 py-2 border border-gray-300 rounded-md">
             <label for="">prenom</label>
