@@ -65,8 +65,8 @@
                     <td class="px-2 md:px-6 py-3"><?php echo $data["date_fin"]; ?></td>
                     <td class="px-2 md:px-6 py-3"><?php echo $data["places_disponibles"]; ?></td>
                     <td class="px-2 md:px-6 py-3 flex space-x-2">
-                        <a class="bg-blue-400 text-white p-3 rounded-lg" href="edit.php">Edit</a>
-                        <a class="bg-red-400 text-white p-3 rounded-lg" href="delete.php">Delete</a>
+                        <a class="bg-blue-400 text-white p-3 rounded-lg" href="./EditActivite.php?id_client=<?php echo $data["id_activite"] ?>">Edit</a>
+                        <a class="bg-red-400 text-white p-3 rounded-lg" href="./DeleteActivite.php?id_client=<?php echo $data["id_activite"] ?>">Delete</a>
                     </td>
                 </tr>
                 <?php endwhile; ?>
