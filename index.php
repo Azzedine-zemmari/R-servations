@@ -65,7 +65,7 @@
                         <td class="px-2 md:px-6 py-3"><?php echo $data["date_naissance"]; ?></td>
                         <td class="px-2 md:px-6 py-3 flex space-x-2">
                             <a class="bg-blue-400 text-white p-3 rounded-lg" href="./EditClient.php?client_id=<?php echo $data["id_client"]; ?>">Edit</a>
-                            <a class="bg-red-400 text-white p-3 rounded-lg" href="./delete.php">Delete</a>
+                            <a class="bg-red-400 text-white p-3 rounded-lg" href="./DeleteClient.php?client_id=<?php echo $data["id_client"]; ?>">Delete</a>
                         </td>
                     </tr>
                     <?php endwhile; ?>
