@@ -7,35 +7,38 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="flex justify-between px-2 py-3 bg-blue-500">
-        <h2>Travel</h2>
+    <header class="flex justify-between px-2 py-3 bg-gray-800">
+        <img src="./logo-white.png" class="w-40" alt="">
         <div class="flex gap-3 items-center">
-            <img src="./search-svgrepo-com.svg" class="w-5 h-5" alt="">
+            <img src="./avatar.png" class="w-10 h-10" alt="">
             <p class="text-white font-bold  ">Hi,Admin</p>
         </div>
     </header>
     <main class="flex">
-        <aside class ="flex flex-col shadow-sm w-1/5 border border-red-500 h-screen">
-            <div class="flex gap-5">
-                <img src="./home-svgrepo-com.svg" class="w-5 h-5" alt="">
-                <a href="index.php" class="w-20 text-[#424242]">client</a>
+    <aside class ="flex flex-col shadow-sm w-56 bg-gray-800 h-screen">
+            <div class="flex gap-5 items-center pl-3 py-2 border-b-2 border-green-600">
+                <img src="./hire.png" class="w-8 h-8" alt="">
+                <a href="index.php" class="w-20 text-white">client</a>
             </div>
-            <div class="flex gap-5">
-                <img src="./home-svgrepo-com.svg" class="w-5 h-5" alt="">
-                <p class="w-20 text-[#424242]">activite</p>
+            <div class="flex gap-5 items-center pl-3 py-2 border-b-2 border-red-600">
+                <img src="./travel-bag.png" class="w-8 h-8" alt="">
+                <a href="activite.php" class="w-20 text-white">activite</a>
             </div>
-            <div class="flex gap-5">
-                <img src="./home-svgrepo-com.svg" class="w-5 h-5" alt="">
-                <a href="./reservation.php" class="w-20 text-[#424242]">reservation</a>
+            <div class="flex gap-5 items-center pl-3 py-2 border-b-2 border-yellow-600">
+                <img src="./reception-bell.png" class="w-8 h-8" alt="">
+                <a href="./reservation.php" class="w-20 text-white">reservation</a>
             </div>
         </aside>
-        <section class="w-4/5">
+        <section class="w-full">
         <?php
             include "./dbConnect.php";
             $query = "SELECT * FROM activite";
             $result = mysqli_query($db_connect,$query);
         ?>
-        <a class="bg-green-400 text-white" href="addActivite.php">add activite</a>
+         <div class="bg-gradient-to-r from-[#2f88da] to-[#07075a] px-5 py-3 flex justify-between w-full rounded-bl-lg rounded-br-lg">
+            <h1 class="text-white font-bold">Activite table</h1>
+            <a class="bg-green-400 text-white px-2 py-1 rounded-md" href="./addActivite.php">add activite</a>
+        </div>
         <table class="w-full text-left overflow-x-auto">
             <thead>
                 <tr>
