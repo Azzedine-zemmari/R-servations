@@ -62,8 +62,15 @@
                         <td class="px-2 md:px-6 py-3"><?php echo $data["nom"]; ?></td>
                         <td class="px-2 md:px-6 py-3"><?php echo $data["titre"]; ?></td>
                         <td class="px-2 md:px-6 py-3"><?php echo $data["date_reservation"]; ?></td>
-                        <td class="px-2 md:px-6 py-3"><?php echo $data["status"]; ?></td>
-                        <td class="px-2 md:px-6 py-3 flex space-x-2">
+                        <td class="px-2 md:px-6 py-3 font-bold
+                            <?php 
+                                echo $data['status'] === 'Confirmee' ? 'text-green-500' : 
+                                    ($data['status'] === 'En attente' ? 'text-yellow-500' : 
+                                    ($data['status'] === 'Annulee' ? 'text-red-500' : ''));
+                            ?>">
+                            <?php echo $data['status']; ?>
+                    </td>                        
+                    <td class="px-2 md:px-6 py-3 flex space-x-2">
                             <a class="bg-blue-400 text-white p-3 rounded-lg" href="edit.php">Edit</a>
                             <a class="bg-red-400 text-white p-3 rounded-lg" href="delete.php">Delete</a>
                         </td>
