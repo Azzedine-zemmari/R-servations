@@ -10,5 +10,5 @@ $status = $_POST["status"];
 $query = "INSERT INTO reservation (id_client,id_activite,date_reservation,status) values('$name','$activite','$date','$status')";
 
 if(mysqli_query($db_connect,$query)){
-    header("Location: ../index.php");
+    header("Location: ./reservation.php");
 }

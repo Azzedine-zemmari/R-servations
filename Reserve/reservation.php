@@ -72,7 +72,7 @@
                     </td>                        
                     <td class="px-2 md:px-6 py-3 flex space-x-2">
                             <a class="bg-blue-400 text-white p-3 rounded-lg" href="edit.php">Edit</a>
-                            <a class="bg-red-400 text-white p-3 rounded-lg" href="delete.php">Delete</a>
+                            <a class="bg-red-400 text-white p-3 rounded-lg" href="DeleteReservation.php?resevId=<?php echo $data["id_reservation"]; ?>">Delete</a>
                         </td>
                     </tr>
                     <?php endwhile; ?>
