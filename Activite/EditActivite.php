@@ -21,7 +21,7 @@ $data = mysqli_fetch_assoc($result);
 </head>
 <body class="bg-gray-50">
     <div class="flex justify-center items-center mt-4">
-        <form class="w-1/2 flex flex-col bg-white px-4 py-2 shadow sm:rounded-lg sm:px-10" action="UpdateActivite.php" method="post">
+        <form class="w-full md:w-1/2 flex flex-col bg-white px-4 py-2 shadow rounded-lg px-10" action="UpdateActivite.php" method="post">
             <input type="hidden" name="id_activite" value="<?php echo $data['id_activite'] ?>" >
             <label for="">titre</label>
             <input type="text" name="titre" value="<?php echo $data['titre']?>"   class="block w-full px-3 py-2 border border-gray-300 rounded-md">

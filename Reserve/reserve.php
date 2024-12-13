@@ -16,11 +16,10 @@
 ?>
 <body class="bg-gray-50">
     <div class="flex justify-center items-center mt-4">
-    <form action="reserveAddprocess.php" method="post" class="w-1/2 flex flex-col bg-white px-4 py-2 shadow sm:rounded-lg sm:px-10">
-        <div class="flex justify-center gap-4 mb-4 ">
+    <form action="reserveAddprocess.php" method="post" class="w-full md:w-1/2 flex flex-col bg-white px-4 py-2 shadow rounded-lg px-10">
             <div class="flex flex-col">
                 <label for="nom">Nom</label>
-                <select name="client" id="client" class=" w-72 px-3 py-2 border border-gray-300 rounded-md">
+                <select name="client" id="client" class=" w-full px-3 py-2 border border-gray-300 rounded-md">
                     <option value="" disabled>select client</option>
                     <?php while($data = mysqli_fetch_assoc($Clients)):?>
                     <option value="<?php echo $data["id_client"]?>"><?php echo $data["nom"]?></option>
@@ -29,17 +28,16 @@
             </div>
             <div class="flex flex-col">
                 <label for="activite">Activite</label>  
-                <select name="activite" id=""class=" w-72 px-3 py-2 border border-gray-300 rounded-md">
+                <select name="activite" id=""class=" block w-full px-3 py-2 border border-gray-300 rounded-md">
                     <option value="" disabled>select activite</option>
                     <?php while($Data = mysqli_fetch_assoc($Activite)):?>
                         <option value="<?php echo $Data["id_activite"]?>"><?php echo $Data["titre"]?></option>
                     <?php endwhile;?>
                 </select>
             </div>
-        </div>
-        <div class="mx-12">
+        <div class="flex flex-col">
             <label for="date">date reservation</label>
-            <input type="date" name="date" class="block  w-full px-3 py-2 border border-gray-300 rounded-md">
+            <input type="date" name="date" class="  w-full px-3 py-2 border border-gray-300 rounded-md">
         </div>
         <div class="flex justify-center items-center space-x-4 my-4">
     <p class="mr-3">Status:</p>
@@ -49,7 +47,7 @@
     </div>
     <div class="flex items-center space-x-1">
         <input type="radio" id="en_attente" name="status" value="En attente">
-        <label for="en_attente">En attente</label>
+        <label for="en_attente">Attente</label>
     </div>
     <div class="flex items-center space-x-1">
         <input type="radio" id="confirmee2" name="status" value="Annulee">
